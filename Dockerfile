@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.armhf:3.5
+FROM lsiobase/xenial.armhf
 MAINTAINER sparklyballs
 
 # set version label
@@ -7,16 +7,10 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 
 # package verions
-ARG SYNC_VER="2.4.5"
-
-# install packages
-RUN \
- apk add --no-cache \
-	curl \
-	tar \
-	libc6-compat && \
+ARG SYNC_VER="stable"
 
 # install resilio
+RUN \
  curl -o \
  /tmp/sync.tar.gz -L \
 	"https://download-cdn.getsync.com/${SYNC_VER}/linux-armhf/resilio-sync_armhf.tar.gz" && \
