@@ -1,24 +1,24 @@
 FROM lsiobase/xenial.armhf
-MAINTAINER sparklyballs
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="sparklyballs"
 
 # package verions
+ARG SYNC_ARCH="armhf"
 ARG SYNC_VER="stable"
 
-# install resilio
 RUN \
+ echo "**** install resilio-sync ****" && \
  curl -o \
  /tmp/sync.tar.gz -L \
-	"https://download-cdn.getsync.com/${SYNC_VER}/linux-armhf/resilio-sync_armhf.tar.gz" && \
+	"https://download-cdn.getsync.com/${SYNC_VER}/linux-${SYNC_ARCH}/resilio-sync_${SYNC_ARCH}.tar.gz" && \
  tar xf \
  /tmp/sync.tar.gz \
 	-C /usr/bin && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  rm -rf \
 	/tmp/*
 
