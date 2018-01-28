@@ -79,6 +79,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Versions
 
++ **28.01.18:** Add /sync to dir whitelist.
 + **26.01.18:** Fix continuation lines.
 + **02.06.17:** Rebase to ubuntu xenial, alpine linux no longer works with resilio.
 + **23.05.17:** Add variable for user defined umask.
