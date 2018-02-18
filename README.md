@@ -45,6 +45,7 @@ The parameters are split into two halves, separated by a colon, the left hand si
 * `-v /downloads` - folder for downloads/cache
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
+* `-e TZ` - for timezone information *eg Europe/London, etc*
 * `-e UMASK_SET` for umask setting of resilio-sync, default if left unset is 022.
 
 This container is based on ubuntu xenial with s6 overlay, for shell access whilst the container is running do `docker exec -it resilio-sync /bin/bash`.
