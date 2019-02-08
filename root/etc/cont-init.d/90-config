@@ -1,0 +1,21 @@
+#!/usr/bin/with-contenv bash
+
+echo '
+**********************************************************
+**********************************************************
+*                                                        *
+*                                                        *
+*          This image has been deprecated                *
+*                                                        *
+*           Use the multi-arch images at                 *
+*                                                        *
+*               linuxserver/resilio-sync                 *
+*                                                        *
+*    https://hub.docker.com/r/linuxserver/resilio-sync   *
+*                                                        *
+*   https://github.com/linuxserver/docker-resilio-sync   *
+*                                                        *
+*                                                        *
+*                                                        *
+**********************************************************
+**********************************************************'
